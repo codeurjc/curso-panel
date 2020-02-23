@@ -1,7 +1,8 @@
 package es.codeurjc.app.helloworld;
 
-import org.testng.annotations.*;
+
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 /**
  * Unit test for simple App.
@@ -9,7 +10,8 @@ import org.testng.Assert;
 public class AppTest {
 	
 	@Test
-	public void pruebaSuma() {
+	public void sumaTest() {
+		// Test implementation
 		int result = 3 + 4;
 		Assert.assertEquals(result, 8);
 	}
