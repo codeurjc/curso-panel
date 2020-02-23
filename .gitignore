@@ -23,3 +23,8 @@
 hs_err_pid*
 /.metadata/
 test-output/
+.metadata/
+.project
+.settings/
+.classpath
+
