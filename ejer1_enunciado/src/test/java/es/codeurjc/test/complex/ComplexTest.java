@@ -1,6 +1,5 @@
 package es.codeurjc.test.complex;
 
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.fail;
 
 import org.testng.annotations.Test;
