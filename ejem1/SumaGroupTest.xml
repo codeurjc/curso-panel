@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="SumaTestSuite" verbose="1" >
+  <test name="TestSuma">
+  	<groups>
+    	<run>
+      		<include name="suma"/>
+    	</run>
+  	</groups>
+  	<classes>
+	   <class name="es.codeurjc.test.ejem.GroupsTest"/>
+	</classes>
+  </test>
+</suite>

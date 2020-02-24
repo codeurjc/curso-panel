@@ -27,4 +27,4 @@ test-output/
 .project
 .settings/
 .classpath
-
+bin/
