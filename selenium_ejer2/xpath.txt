@@ -1,0 +1,7 @@
+Ejercicio XPath
+
+//*[@id="menu-list"]//*[text()="Cheatsheet"]
+
+//*[@class="section"]//h3
+
+(//*[@id="main-nav"]//a)[1]

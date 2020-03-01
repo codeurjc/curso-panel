@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>es.codeurjc.test</groupId>
-	<artifactId>selenium_ejem1</artifactId>
+	<artifactId>selenium_ejem6</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
@@ -11,15 +11,10 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<junit.jupiter.version>5.5.2</junit.jupiter.version>
+		<org.testcontainer.version>1.12.4</org.testcontainer.version>
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>io.github.bonigarcia</groupId>
-			<artifactId>webdrivermanager</artifactId>
-			<version>3.3.0</version>
-			<scope>test</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -27,15 +22,23 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-		  <groupId>org.testng</groupId>
-		  <artifactId>testng</artifactId>
-		  <version>6.10</version>
-		  <scope>test</scope>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.10</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- TEST CONTAINER DEPENDENCIES -->
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>testcontainers</artifactId>
+			<version>${org.testcontainer.version}</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.assertj</groupId>
-			<artifactId>assertj-core</artifactId>
-			<version>3.8.0</version>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>selenium</artifactId>
+			<version>${org.testcontainer.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

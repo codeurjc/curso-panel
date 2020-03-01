@@ -2,37 +2,38 @@ package es.codeurjc.test.web;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 @SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class WebAppTest {
+public class WebAppTest extends AbstractTestNGSpringContextTests {
 
 	@LocalServerPort
     int port;
 
 	private WebDriver driver;
 
-	@BeforeAll
+	@BeforeClass
 	public static void setupClass() {
 		WebDriverManager.chromedriver().setup();
 	}
 
-	@BeforeEach
+	@BeforeMethod
 	public void setupTest() {
 		driver = new ChromeDriver();
 	}
 
-	@AfterEach
+	@AfterMethod
 	public void teardown() {
 		if (driver != null) {
 			driver.quit();
